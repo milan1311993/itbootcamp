@@ -83,4 +83,13 @@ public class HeaderMenu extends PageFactoryInitWaiters {
 	public void clickEnter() {
 		searchInput.sendKeys(Keys.ENTER);
 	}
+	
+	public void clickOnAdvancedSearch() {
+		elementToAppear(advancedSearchOption);
+		advancedSearchOption.click();
+	}
+	
+	public WebElement getSearchInput() {
+		return searchInput;
+	}
 }
