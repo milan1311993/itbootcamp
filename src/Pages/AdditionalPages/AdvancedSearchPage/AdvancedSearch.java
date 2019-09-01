@@ -36,4 +36,21 @@ public class AdvancedSearch extends PageFactoryInitWaiters {
 	public AdvancedSearch(WebDriver driver) {
 		super(driver);
 	}
+	
+	// actions
+	public void clickOnDate(String y, String m, String d) {
+		listOfDateDropBox.get(0).click();
+		Select dropdown = new Select(listOfDateDropBox.get(0));
+		dropdown.selectByVisibleText(y);
+		listOfDateDropBox.get(1).click();
+		dropdown = new Select(listOfDateDropBox.get(1));
+		dropdown.selectByVisibleText(m);
+		listOfDateDropBox.get(2).click();
+		dropdown = new Select(listOfDateDropBox.get(2));
+		dropdown.selectByVisibleText(d);
+	}
+	
+	public void clickOnSearchButton() {
+		firstSearchButton.click();
+	}
 }
